@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Display Flex</title>
+    <style>
+        /* Estilo do header */
+        header {
+            display: flex;
+            justify-content: space-between; /* Organiza o título à esquerda e o menu à direita */
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Estilo do conteúdo principal */
+        main {
+            display: flex;
+            flex-direction: row; /* Organiza o conteúdo em linha */
+            flex-wrap: wrap; /* Permite quebra de linha para ajustar ao tamanho da tela */
+            gap: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .content-box {
+            flex: 1 1 300px; /* Ajusta o tamanho mínimo de 300px com flex-grow e flex-basis */
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Meu Site Flex</h1>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <div class="content-box">Conteúdo 1</div>
+    <div class="content-box">Conteúdo 2</div>
+    <div class="content-box">Conteúdo 3</div>
+    <div class="content-box">Conteúdo 4</div>
+</main>
+
+</body>
+</html>
